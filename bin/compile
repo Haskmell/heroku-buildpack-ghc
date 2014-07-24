@@ -61,6 +61,7 @@ function install_prebuilt {
   PKG=$1
   VER=$2
 
+  echo $CACHE_DIR/$PKG
   if [ ! -e $CACHE_DIR/$PKG ]; then
     PKG_URL=$PREBUILT/heroku-$PKG-$VER.tar.gz
     if curl --output /dev/null --silent --head --fail $PKG_URL; then
